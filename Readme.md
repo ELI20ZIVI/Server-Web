@@ -30,21 +30,7 @@ Impostare l'indirizzo IP statico (fondamentale per visualizzare il sito dall'est
 
 - aprire con l'editor di testo il file **netplan** con il **comando sudo nano /etc/netplan**
 
-- settarlo seguendo questo esempio
-
-   network:
-    &nbspversion: 2
-     renderer: networkd
-      ethernets:
-       eth1:
-        addresses: [indirizzo_ip/netmask]
-        gateway4: gateway
-        nameservers:
-         search: [mydomain, otherdomain]
-         addresses: [dns]
-
-   ip link set eth1 up
-   ip link set eth1 down
+- settare il file netblan con l'**indirizzo IP**, la **netmask**, il **gateway** e il **DNS**
 
 Modificare la pagina index.html
 
