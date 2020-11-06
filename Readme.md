@@ -33,7 +33,7 @@ Impostare l'indirizzo IP statico (fondamentale per visualizzare il sito dall'est
 - settarlo seguendo questo esempio
 
    network:
-    version: 2
+    version: 2
      renderer: networkd
       ethernets:
        eth1:
