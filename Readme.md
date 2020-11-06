@@ -32,19 +32,19 @@ Impostare l'indirizzo IP statico (fondamentale per visualizzare il sito dall'est
 
 - settarlo seguendo questo esempio
 
-        network:
-                 version: 2
-                 renderer: networkd
-                 ethernets:
-                         eth1:
-                                 addresses: [indirizzo_ip/netmask]
-                                 gateway4: gateway
-                                nameservers:
-                                         search: [mydomain, otherdomain]
-                                         addresses: [dns]
+   network:
+    version: 2
+     renderer: networkd
+      ethernets:
+       eth1:
+        addresses: [indirizzo_ip/netmask]
+        gateway4: gateway
+        nameservers:
+         search: [mydomain, otherdomain]
+         addresses: [dns]
 
-        ip link set eth1 up
-        ip link set eth1 down
+   ip link set eth1 up
+   ip link set eth1 down
 
 Modificare la pagina index.html
 
