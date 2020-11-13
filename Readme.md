@@ -63,3 +63,23 @@ Configurazione pagine del webserver
 - provare su un browser da una macchina host se i vari siti sono raggiungibili
 
 - se non si raggiungono i siti controllare la configurazione di rete o la configurazione del server
+
+Configurazione DNS locale (su Windows)
+
+- navigare nella cartella **C:\Windows\system32\drivers\etc\hosts**
+
+- modificare le impostazioni del file (indirizzoIP    hostname) e salvare il file
+
+- testare il funzionamento del dns insrendo nel browser l'hostname inserito nel file hosts
+
+Installazione server FTP
+
+- creare il nuovo utente amministratore con il comando **sudo useradd -s /bin/bash -d /var/www/'Sito A' -m usersitoa** e impostare la password con il comando **sudo passwd usersitoa**
+
+- installare il server FTP con il comando **sudo apt install vsftpd** sulla macchina linux
+
+- settare il file di configurazione del file FTP per il corretto funzionamento
+
+- installare un client FTP sulla macchina dell'amministratore (es. FileZilla) e avviarlo
+
+- effettuare il login sul client e provare il trasferimento dei file dal client al server (se non dovesse funzionare controllare le impostazioni del server web e del server FTP)
