@@ -1,0 +1,70 @@
+sudo apt install openssh-server
+  --> server ssh
+  mi permette di raggiungere la macchina linux da ssh
+
+scheda di rete bridge
+
+settare ip statico:
+  -->sudo nano
+
+sudo apt install apache2
+  -->installa e attiva il server web
+
+/var/www/html --> cartella contenente i file html del server
+
+Cose scopiazzate dal prof:
+login utente appartenente a sudoers – > adminuser:adminuser
+
+$sudo -i ; diventa root
+
+#apt install openssh-server
+
+fix ip
+
+nano /etc/netplan/
+
+netplan try o netplan apply
+
+network:
+  version: 2
+  renderer: networkd
+  ethernets:
+    eth1:
+      addresses: [10.10.10.2/24]
+      gateway4: 10.10.10.1
+      nameservers:
+          search: [mydomain, otherdomain]
+          addresses: [10.10.10.1, 1.1.1.1]
+
+ip link set eth1 up
+ip link set eth1 down
+
+ssh da putty
+
+apt install apache2
+apt install mc
+mcedit /etc/hosts
+mcedit /etc/hostname
+apt install net-tools
+
+
+File settaggio webserver:
+    cd /etc/apache2/sites-available
+    sudo nano 0x0-default.conf
+  da qui posso settare tutti i siti sul webserver
+
+  per attivare il sito:
+    a2ensite 0x0-default.conf
+    systemctl reload apache2
+
+per il pc che va sul sito del server devo cambiare il dns del client
+C:\Windows\system32\drivers\etc\hosts --> dns locale
+
+Creo un utente con home la cartella Sito A e con l'accesso alla console:
+    sudo useradd -s /bin/bash -d /var/www/'Sito A' -m usersitoa
+Gli imposto una password:
+    sudo passwd usersitoa
+    
+Per installare il server FTP si usa:
+    sudo apt install vsftp
+    
