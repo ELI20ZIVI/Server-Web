@@ -61,9 +61,9 @@ per il pc che va sul sito del server devo cambiare il dns del client
 C:\Windows\system32\drivers\etc\hosts --> dns locale
 
 Creo un utente con home la cartella Sito A e con l'accesso alla console:
-    sudo useradd -s /bin/bash -d /var/www/'Sito A' -m usersitoa
+    sudo useradd -s /bin/bash -d /var/www/'cartella root sito' -m nuovoUtente
 Gli imposto una password:
-    sudo passwd usersitoa
+    sudo passwd nuovoUtente
     
 Per installare il server FTP si usa:
     sudo apt install vsftp
